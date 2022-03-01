@@ -15,4 +15,5 @@ class StringGenerator(object):
 
 
 if __name__ == '__main__':  # pragma: no cover
+    cherrypy.config.update({'server.socket_host': '0.0.0.0'})
     cherrypy.quickstart(StringGenerator())
