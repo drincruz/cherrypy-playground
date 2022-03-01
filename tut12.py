@@ -14,5 +14,5 @@ class StringGenerator(object):
         return ''.join(random.sample(string.hexdigits, 8))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     cherrypy.quickstart(StringGenerator())
