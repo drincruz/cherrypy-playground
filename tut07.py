@@ -30,6 +30,8 @@ if __name__ == '__main__':
             'tools.sessions.on': True,
             'tools.response_headers.on': True,
             'tools.response_headers.headers': [('Content-Type', 'text/plain')],
-        }
+        },
     }
+    cherrypy.config.update({'server.socket_host': '0.0.0.0'})
+    cherrypy.log.screen = True
     cherrypy.quickstart(StringGeneratorWebService(), '/', conf)
